@@ -18,24 +18,36 @@ while 1:
 		if count==f1:
 			print "Turn down."
 			break
-while 1:
-   	key1=msvcrt.getch()
-	if key1=='s':
-		count+=1
-		print "						 "
-		print "						|"
-		print "						v"
-		if count==f2:
-			print "						Turn right.",
+	else:
+		print "Wrong key!"
+		break
+if count==f1:
+	while 1:
+   		key1=msvcrt.getch()
+		if key1=='s':
+			count+=1
+			print "						 "
+			print "						|"
+			print "						v"
+			if count==f2:
+				print "						Turn right.",
+				break
+		else:
+			print "Wrong key!"
 			break
-while 1:
-   	key2=msvcrt.getch()
-	if key2=='d':
-		count+=1
-		print "--> ",
-		if count==finish:
+if count==f2:	
+	while 1:
+   		key2=msvcrt.getch()
+		if key2=='d':
+			count+=1
+			print "--> ",
+			if count==finish:
+				break
+		else:
+			print "Wrong key!"
 			break
 
 time_elapsed=time.time()-s_time
 print "Game over"
-print "Time taken: " + str(time_elapsed)
+if count==finish:
+	print "Time taken: " + str(time_elapsed)
