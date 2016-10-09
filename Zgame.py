@@ -51,3 +51,8 @@ time_elapsed=time.time()-s_time
 print "Game over"
 if count==finish:
 	print "Time taken: " + str(time_elapsed)
+
+
+'''
+1. Mention controls for the game.
+'''
